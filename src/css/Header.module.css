@@ -1,0 +1,63 @@
+/* @import '../images/svg/add_shopping_cart.svg' */
+
+.header {
+    border-bottom: 2px solid #6a6a6a;
+}
+
+.header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+/* logo */
+
+.header__logo a {
+    font-family: fatheya;
+    font-size: 32px;
+    color: #fff;
+}
+
+/* nav */
+.header__menu {
+    display: flex;
+}
+
+.header__list {
+    margin: 0 50px 0 0;
+}
+.header__list:last-child {
+    margin: 0;
+}
+.header__list a {
+    font-size: 24px;
+    color: #fff;
+}
+
+.header__list_sign a {
+    background: #007b80;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+.header__list_cart a {
+    background: #ff7d2e;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+.header__list_sign a::before {
+    display: inline-block;
+    content: "";
+    width: 23px;
+    height: 15px;
+    margin: 0 5px 0 0;
+    background: url("../images/svg/login.svg") no-repeat;
+}
+.header__list_cart a::before {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 14px;
+    margin: 0 5px 0 0;
+    background: url("../images/svg/add_shopping_cart.svg") no-repeat;
+}

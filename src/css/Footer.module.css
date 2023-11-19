@@ -1,0 +1,50 @@
+.footer {
+    margin: 100px 0 0 0;
+    background: #202020;
+    padding: 55px 0;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__list a {
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer__network {
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+
+.footer__network a {
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
+.footer__network a:last-child {
+    margin: 0;
+}
+
+.footer__network img {
+    width: 100%;
+    height: 40px;
+}
+
+.footer__line {
+    height: 1px;
+    width: 100%;
+    background: #6a6a6a;
+}
+
+.footer__copyright {
+    font-family: roboto;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin: 18px 0 0 0;
+}
