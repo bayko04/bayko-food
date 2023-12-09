@@ -17,6 +17,8 @@ function Menu() {
                             text={card.text}
                             price={card.price}
                             key={card.id}
+                            weight={card.weight}
+                            id={card.id}
                         />
                     ))}
                 </SelectSection>
@@ -28,6 +30,8 @@ function Menu() {
                             text={card.text}
                             price={card.price}
                             key={card.id}
+                            weight={card.weight}
+                            id={card.id}
                         />
                     ))}
                 </SelectSection>

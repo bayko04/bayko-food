@@ -1,14 +1,16 @@
 import styles from "../../css/Intro.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../typeOfStates/RootState"
+import { whichId, setPick } from "../../reducers/cardPcikedSlcie"
 import {
     changeInput,
     setSearchData,
     setSearchActive,
-} from "../../reducers/serach"
-import { useState, useEffect } from "react"
+} from "../../reducers/serachSlice"
+import { useEffect } from "react"
 import Found from "./Found"
 import foodsData from "../../data/foodsData"
+import drinksData from "../../data/drinksData"
 
 function Search() {
     const dispatch = useDispatch()
@@ -23,9 +25,10 @@ function Search() {
     )
 
     useEffect(() => {
+        const allData = [...foodsData, ...drinksData]
         dispatch(
             setSearchData(
-                foodsData.filter((el) => {
+                allData.filter((el) => {
                     if (searchValue.length !== 0) {
                         return (
                             el.title
@@ -39,8 +42,8 @@ function Search() {
     }, [searchValue])
 
     const clearSearch = (e: any) => {
-        dispatch(changeInput(""))
-        e.target.value = ""
+        // dispatch(changeInput(""))
+        // e.target.value = ""
     }
 
     return (
@@ -55,10 +58,12 @@ function Search() {
                 </div>
                 <input
                     onChange={(e) => dispatch(changeInput(e.target.value))}
-                    onFocus={() => dispatch(setSearchActive(true))}
+                    onFocus={() => {
+                        dispatch(setSearchActive(true))
+                        dispatch(changeInput(""))
+                    }}
                     onBlur={(e) => {
                         dispatch(setSearchActive(false))
-                        dispatch(setSearchData([]))
                         clearSearch(e)
                     }}
                     className={styles.search__search}
@@ -79,14 +84,28 @@ function Search() {
                     }}
                     className={styles.search__data}
                 >
-                    {searchData.map((data, ind) => {
+                    {searchData.map((data) => {
                         return (
                             <Found
-                                key={ind}
+                                key={data.id}
+                                id={data.id}
+                                text={data.text}
                                 title={data.title}
+                                weight={data.weight}
                                 img={data.img}
                                 price={data.price}
-                            />
+                            >
+                                {/* {which === data.id && pick && (
+                                    <PickedCard
+                                        id={data.id}
+                                        text={data.text}
+                                        title={data.title}
+                                        weight={data.weight}
+                                        img={data.img}
+                                        price={data.price}
+                                    />
+                                )} */}
+                            </Found>
                         )
                     })}
                 </div>

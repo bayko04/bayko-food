@@ -255,3 +255,43 @@
 /* .foodSelection__title:hover {
     color: #000000;
 } */
+
+/* adaptive */
+
+@media (max-width: 1300px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 767px) {
+    .search__row {
+        width: 260px;
+    }
+    .foodSelection {
+        width: 450px;
+    }
+}
+@media (max-width: 480px) {
+    /* call */
+
+    .call__row {
+        display: block;
+        /* flex-direction: column;
+        align-items: center;
+        margin: 40px 0 0 0; */
+        text-align: center;
+    }
+    .call__numbers {
+        margin: 0 0 10px 0;
+    }
+    /* search */
+    .search__row {
+        width: 260px;
+    }
+
+    /* foodSelection */
+    .foodSelection {
+        width: 300px;
+    }
+}

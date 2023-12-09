@@ -1,4 +1,4 @@
-import { isTrue, isFalse } from "../../reducers/isActive"
+import { isTrue, isFalse } from "../../reducers/isActiveSlice"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../typeOfStates/RootState"
 import { useEffect, useState } from "react"

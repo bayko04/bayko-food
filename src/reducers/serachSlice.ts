@@ -1,10 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { ICards } from "../components/types/types"
 
-interface searchObject {
-    img: string
-    price: string
-    title: string
-}
+interface searchObject extends ICards {}
 
 export interface searchState {
     input: string

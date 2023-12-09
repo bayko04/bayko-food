@@ -3,7 +3,7 @@ interface IBanerData {
     id: number
 }
 
-const bannerData = [
+const bannerData: Array<IBanerData> = [
     {
         img: "/images/content/bannerBox.jpg",
         id: 0,
