@@ -10,8 +10,11 @@ const navSlice = createSlice({
         show: false,
     },
     reducers: {
-        setShow: (state) => {
-            state.show = state.show ? false : true
+        // setShow: (state) => {
+        //     state.show = state.show ? false : true
+        // },
+        setShow: (state, action) => {
+            state.show = action.payload
         },
     },
 })

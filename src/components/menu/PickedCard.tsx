@@ -29,20 +29,12 @@ const PickedCard = ({
     const count = useSelector((state: RootState) => state.cardPicked.count)
     const cartData = useSelector((state: RootState) => state.cart.cartData)
 
-    const clickOnTarget = (e: any) => {
-        const targetElement = e.target
-        // Проверяем, был ли клик не по элементу с классом "ignoreClick"
-        if (!targetElement.closest(styles.card)) {
-            dispatch(setPick(false))
-        }
-    }
-
     console.log(cartData)
     return (
         <>
             <div
-                onClick={(e) => {
-                    clickOnTarget(e)
+                onClick={() => {
+                    dispatch(setPick(false))
                 }}
                 className={styles.pickedCard__back}
             ></div>

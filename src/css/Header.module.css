@@ -58,7 +58,16 @@
     padding: 6px 12px;
     border-radius: 10px;
     color: #fff;
+    transition: all 0.4s ease;
 }
+
+.header__cart_button:hover {
+    background: #da5300;
+}
+.header__cart_button:active {
+    background: rgb(231, 100, 19);
+}
+
 .header__sign_button::before {
     display: inline-block;
     content: "";
@@ -290,17 +299,16 @@
     /* nav */
 
     .header__nav {
-        transform: translateY(-100%);
+        transform: translateX(100%);
     }
     .header__nav.header__bgNav {
-        transform: translateY(0);
-        top: 100%;
+        transform: translateX(0);
     }
     .header__nav {
         min-width: 100vw;
         background: #3b3b3d;
         left: 0;
-        top: 0;
+        top: 100%;
         position: absolute;
         padding: 60px 0;
         transition: all 0.7s ease;
@@ -312,5 +320,9 @@
 
     .header__list {
         margin: 0 0 40px 0;
+    }
+
+    .signIn__restorePassword {
+        display: block;
     }
 }

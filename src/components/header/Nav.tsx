@@ -6,6 +6,7 @@ import { RootState } from "../../typeOfStates/RootState"
 import RegisterForm from "./RegisterForm"
 import { setCart } from "../../reducers/cartSlice"
 import { useEffect } from "react"
+import { Link as ScrollLink } from "react-scroll"
 
 const Nav = () => {
     const dispatch = useDispatch()
@@ -14,12 +15,13 @@ const Nav = () => {
     const show = useSelector((state: RootState) => state.nav.show)
 
     useEffect(() => {
-        cart
-            ? (document.body.style.overflow = "hidden")
-            : (document.body.style.overflow = "")
-        show
-            ? (document.body.style.overflow = "hidden")
-            : (document.body.style.overflow = "")
+        if (cart || show) {
+            document.body.style.overflow = "hidden"
+        }
+
+        if (!cart && !show) {
+            document.body.style.overflow = ""
+        }
     }, [cart, show])
 
     return (
@@ -30,11 +32,20 @@ const Nav = () => {
                 }`}
             >
                 <ul className={styles.header__menu}>
-                    <li className={styles.header__list}>
-                        <Link to="/menu">Menu</Link>
+                    <li
+                        style={{ cursor: "pointer" }}
+                        className={styles.header__list}
+                    >
+                        <ScrollLink
+                            to="section1"
+                            smooth={true}
+                            duration={500}
+                        >
+                            Menu
+                        </ScrollLink>
                     </li>
                     <li className={styles.header__list}>
-                        <Link to="/menu">Contacts</Link>
+                        <Link to="/contacts">Contacts</Link>
                     </li>
                     <li
                         className={`${styles.header__list} ${styles.header__list_sign}`}
@@ -57,7 +68,6 @@ const Nav = () => {
                                 cart
                                     ? dispatch(setCart(false))
                                     : dispatch(setCart(true))
-                                // console.log(cart)
                             }}
                             className={styles.header__cart_button}
                         >

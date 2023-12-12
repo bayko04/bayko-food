@@ -8,6 +8,7 @@ import {
     setCartData,
     setUnqueEl,
 } from "../../reducers/cartSlice"
+import { setShow } from "../../reducers/navSlice"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
@@ -131,6 +132,10 @@ const Cart = () => {
                             <Link
                                 to={"/order"}
                                 className={styles.cart__order}
+                                onClick={() => {
+                                    dispatch(setShow(false))
+                                    dispatch(setCart(false))
+                                }}
                             >
                                 place an order
                             </Link>

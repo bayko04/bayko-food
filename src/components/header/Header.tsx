@@ -4,6 +4,7 @@ import Nav from "./Nav"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../typeOfStates/RootState"
 import { setShow } from "../../reducers/navSlice"
+import { useEffect } from "react"
 
 const Header = () => {
     const dispatch = useDispatch()
@@ -18,7 +19,9 @@ const Header = () => {
                     </div>
                     <div
                         onClick={() => {
-                            dispatch(setShow())
+                            show
+                                ? dispatch(setShow(false))
+                                : dispatch(setShow(true))
                         }}
                         className={`${styles.header__showNav} ${
                             show ? styles.header__closeNav : ""

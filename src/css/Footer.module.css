@@ -52,6 +52,7 @@
 /* faq */
 
 .faq {
+    flex: 1 1 100%;
     padding: 100px 0;
 }
 
@@ -109,6 +110,7 @@
 /* address */
 
 .adresses {
+    flex: 1 1 100%;
     padding: 100px 0;
 }
 
@@ -142,6 +144,7 @@
 
 /* contacts */
 .contacts {
+    flex: 1 1 100%;
     padding: 100px 0;
 }
 
@@ -158,4 +161,21 @@
     font-size: 20px;
     font-weight: 400;
     color: #fff;
+}
+
+@media (max-width: 1300px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 767px) {
+    .adresses__map {
+        height: 300px;
+    }
+}
+@media (max-width: 500px) {
+    .adresses__map {
+        height: 200px;
+    }
 }
