@@ -242,8 +242,25 @@
         width: 350px;
     }
 }
-@media (max-width: 407px) {
+@media (max-width: 405px) {
     .cart {
-        width: 200px;
+        width: 300px;
+    }
+    .cart__total {
+        flex-direction: column;
+    }
+    .cart__btns {
+        margin: 0 0 10px 0;
+    }
+    .cart__hideCart {
+        left: -45px;
+    }
+    /* .cart__placeAnOrder {
+        padding: 30px 30px 50px;
+    } */
+}
+@media (max-width: 360px) {
+    .cart {
+        width: 280px;
     }
 }

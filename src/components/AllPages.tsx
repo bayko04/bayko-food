@@ -11,14 +11,12 @@ const AllPages = () => {
     const cart = useSelector((state: RootState) => state.cart.cart)
 
     return (
-        <>
-            <Header />
+        <div className="content">
             <Intro />
             <Menu />
             <MoreInfo />
-            <Footer />
-            {cart && <Cart />}
-        </>
+            {/* {cart && <Cart />} */}
+        </div>
     )
 }
 

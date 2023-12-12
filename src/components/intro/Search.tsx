@@ -41,13 +41,21 @@ function Search() {
         )
     }, [searchValue])
 
-    const clearSearch = (e: any) => {
-        // dispatch(changeInput(""))
-        // e.target.value = ""
+    const clickOnTarget = (e: any) => {
+        const targetElement = e.target
+        // Проверяем, был ли клик не по элементу с классом "ignoreClick"
+        if (!targetElement.closest(styles.card)) {
+            dispatch(setSearchData([]))
+        }
     }
 
     return (
-        <div className={styles.search}>
+        <div
+            onClick={(e) => {
+                clickOnTarget(e)
+            }}
+            className={styles.search}
+        >
             <h3 className={styles.search__title}>search</h3>
             <div className={styles.search__row}>
                 <div className={styles.search__svg}>
@@ -59,20 +67,15 @@ function Search() {
                 <input
                     onChange={(e) => dispatch(changeInput(e.target.value))}
                     onFocus={() => {
-                        dispatch(setSearchActive(true))
+                        // dispatch(setSearchActive(true))
                         dispatch(changeInput(""))
                     }}
                     onBlur={(e) => {
-                        dispatch(setSearchActive(false))
-                        clearSearch(e)
+                        // dispatch(setSearchActive(false))
+                        e.target.value = ""
                     }}
                     className={styles.search__search}
                     type="text"
-                    style={{
-                        border: `${
-                            searchActive ? "1px solid #ff7d2e" : "none"
-                        }`,
-                    }}
                 />
                 <div
                     style={{

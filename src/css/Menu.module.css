@@ -95,6 +95,13 @@
     padding: 3px 10px;
     background: #ff7d2e;
     border-radius: 10px;
+    transition: all 0.2s ease;
+}
+.card__cart:hover {
+    background: #da5300;
+}
+.card__cart:active {
+    background: rgb(231, 100, 19);
 }
 
 /* pickedCard */
@@ -272,5 +279,37 @@
     }
     .card {
         flex: 0 0 100%;
+    }
+
+    /* .pickedCard {
+        width: 70%;
+    } */
+    .pickedCard__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pickedCard__title {
+        margin: 10px 0;
+    }
+    .pickedCard__text {
+        max-width: 315px;
+    }
+}
+
+@media (max-width: 630px) {
+    .pickedCard__img {
+        width: 105px;
+        height: 105px;
+        margin: 0 25px 0 0;
+    }
+    .pickedCard {
+        width: 60%;
+    }
+}
+@media (max-width: 430px) {
+    .pickedCard {
+        width: 90%;
     }
 }

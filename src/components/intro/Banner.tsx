@@ -1,7 +1,7 @@
 import { isTrue, isFalse } from "../../reducers/isActiveSlice"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../typeOfStates/RootState"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from "../../css/Intro.module.css"
 import bannerData from "../../data/bannerData"
 
@@ -12,11 +12,11 @@ function Banner() {
     const isActive = useSelector(
         (state: RootState) => state.active.isActiveValue
     )
-    const [copyData, setCopyData] = useState([
+    const copyData = [
         bannerData[bannerData.length - 1],
         ...bannerData,
         bannerData[0],
-    ])
+    ]
     const [transition, setTransition] = useState(true)
 
     // showbtns
@@ -27,20 +27,27 @@ function Banner() {
         dispatch(isFalse())
     }
 
+    // const clearBannerInterval = () => {
+    //     clearInterval(interv)
+    //     interv = setInterval(() => changeSlide(currentInd + 1), 2300)
+    // }
+
     // bannerSlider
     const changeSlide = (index: number): void => {
         if (index == 0) {
             setcurrentInd(index)
             setTimeout(() => {
-                setcurrentInd(bannerData.length)
+                setcurrentInd(copyData.length - 2)
                 setTransition(false)
-            }, 500)
-        } else if (index == bannerData.length + 1) {
+            }, 300)
+            setTransition(true)
+        } else if (index >= copyData.length - 1) {
             setcurrentInd(index)
             setTimeout(() => {
                 setcurrentInd(1)
                 setTransition(false)
-            }, 500)
+            }, 300)
+            setTransition(true)
         } else {
             setTransition(true)
             setcurrentInd(index)
@@ -54,6 +61,18 @@ function Banner() {
         changeSlide(currentInd - 1)
     }
 
+    console.log(currentInd)
+    // let interv: any
+
+    // const clearBanner = () => {
+    //     // clearInterval(interv)
+    //     setTimeout(() => {
+    //         interv = setInterval(nextSlide, 2000)
+    //     }, 2000)
+    // }
+
+    // useEffect(() => {}, [currentInd])
+
     return (
         <div
             onMouseEnter={handleEnter}
@@ -62,18 +81,22 @@ function Banner() {
         >
             <div
                 style={{
-                    transform: `translateX(-${currentInd * 1065}px)`,
-                    transition: `${transition ? "all 0.6s ease" : "none"}`,
+                    transform: `translateX(-${currentInd * 100}%)`,
+                    transition: `${transition ? "all 0.3s ease" : "none"}`,
                 }}
                 className={styles.banner__row}
             >
                 {copyData.map((data, ind) => {
                     return (
-                        <img
+                        <div
                             key={ind}
-                            src={data.img}
-                            alt=""
-                        />
+                            className={styles.banner__gallery}
+                        >
+                            <img
+                                src={data.img}
+                                alt=""
+                            />
+                        </div>
                     )
                 })}
             </div>
