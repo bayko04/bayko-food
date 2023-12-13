@@ -1,70 +1,62 @@
 import { ICards } from "../components/types/types"
 
-const foodsData: Array<ICards> = [
+const comboData: Array<ICards> = [
     {
         img: "/images/content/food.png",
-        title: "Fezar salat",
+        title: "Big hot-dog",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
-        id: 0,
-        weight: "350г",
+        id: 24,
     },
     {
         img: "/images/content/food.png",
-        title: "Cezar salat",
+        title: "Children combo",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
-        price: 300,
-        id: 1,
-        weight: "350г",
+        price: 1500,
+        id: 25,
     },
     {
         img: "/images/content/food.png",
-        title: "Panda food",
+        title: "Other combo",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
-        id: 2,
-        weight: "350г",
+        id: 26,
     },
     {
         img: "/images/content/food.png",
-        title: "God of war",
+        title: "Cheap combo",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
-        id: 3,
-        weight: "350г",
-    },
-    {
-        img: "/images/content/food.png",
-        title: "Cezar salat",
-        text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
-        price: 1500,
-        id: 4,
-        weight: "350г",
+        id: 27,
     },
     {
         img: "/images/content/food.png",
         title: "Cezar salat",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
-        id: 5,
-        weight: "350г",
+        id: 28,
     },
     {
         img: "/images/content/food.png",
         title: "Cezar salat",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
-        id: 6,
-        weight: "350г",
+        id: 29,
     },
     {
         img: "/images/content/food.png",
         title: "Cezar salat",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
-        id: 7,
-        weight: "350г",
+        id: 30,
+    },
+    {
+        img: "/images/content/food.png",
+        title: "Cezar salat",
+        text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
+        price: 1500,
+        id: 31,
     },
 ]
 
-export default foodsData
+export default comboData

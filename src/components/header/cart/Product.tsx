@@ -64,7 +64,7 @@ const Product = ({ img, title, text, price, id = 0 }: CartProps) => {
                         +
                     </button>
                 </div>
-                <h4 className={styles.product__price}>{price * counter}</h4>
+                <h4 className={styles.product__price}>{price * counter}c</h4>
             </div>
         </div>
     )

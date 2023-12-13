@@ -19,18 +19,13 @@ function Banner() {
     ]
     const [transition, setTransition] = useState(true)
 
-    // showbtns
+    // show slider btns
     const handleEnter = (): void => {
         dispatch(isTrue())
     }
     const handleLeave = (): void => {
         dispatch(isFalse())
     }
-
-    // const clearBannerInterval = () => {
-    //     clearInterval(interv)
-    //     interv = setInterval(() => changeSlide(currentInd + 1), 2300)
-    // }
 
     // bannerSlider
     const changeSlide = (index: number): void => {
@@ -54,6 +49,7 @@ function Banner() {
         }
     }
 
+    // next/prev swipe btns
     const nextSlide = (): void => {
         changeSlide(currentInd + 1)
     }
@@ -61,17 +57,16 @@ function Banner() {
         changeSlide(currentInd - 1)
     }
 
-    console.log(currentInd)
-    // let interv: any
+    // autoSwipe
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            nextSlide()
+        }, 4000)
 
-    // const clearBanner = () => {
-    //     // clearInterval(interv)
-    //     setTimeout(() => {
-    //         interv = setInterval(nextSlide, 2000)
-    //     }, 2000)
-    // }
-
-    // useEffect(() => {}, [currentInd])
+        return () => {
+            clearInterval(intervalId)
+        }
+    }, [currentInd])
 
     return (
         <div

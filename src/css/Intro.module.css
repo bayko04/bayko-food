@@ -169,7 +169,7 @@
 .search__search {
     font-family: chicken;
     font-size: 20px;
-    width: 360px;
+    width: 100%;
     background: #3b3b3d;
     height: 35px;
     border-radius: 15px;
@@ -178,8 +178,6 @@
     position: relative;
     z-index: 2;
     display: inline-block;
-    /* border: 1px solid #ff7d2e; */
-    /* border-left: 0; */
 }
 .search__search:focus {
     border: 1px solid #ff7d2e;

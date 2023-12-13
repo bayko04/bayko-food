@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom"
 import { useEffect } from "react"
 import { useSelector } from "react-redux"
 import { RootState } from "../typeOfStates/RootState"
-import Cart from "../components/header/Cart"
+import Cart from "../components/header/cart/Cart"
 
 const Layout = () => {
     const cart = useSelector((state: RootState) => state.cart.cart)

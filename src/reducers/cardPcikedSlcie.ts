@@ -28,9 +28,12 @@ const cardPickedSlice = createSlice({
                 state.count -= 1
             }
         },
+        resetCount: (state, action) => {
+            state.count = action.payload
+        },
     },
 })
 
-export const { setPick, whichId, incrementCount, decrementCount } =
+export const { setPick, whichId, incrementCount, decrementCount, resetCount } =
     cardPickedSlice.actions
 export default cardPickedSlice.reducer

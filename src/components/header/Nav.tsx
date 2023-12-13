@@ -40,6 +40,7 @@ const Nav = () => {
                             to="section1"
                             smooth={true}
                             duration={500}
+                            offset={-100}
                         >
                             Menu
                         </ScrollLink>
@@ -53,7 +54,9 @@ const Nav = () => {
                         <button
                             className={styles.header__sign_button}
                             onClick={() => {
-                                dispatch(setForm())
+                                form
+                                    ? dispatch(setForm(false))
+                                    : dispatch(setForm(true))
                             }}
                         >
                             Sign in

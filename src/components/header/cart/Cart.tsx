@@ -1,14 +1,14 @@
-import styles from "../../css/Cart.module.css"
-import Product from "./regsterForms/Product"
+import styles from "../../../css/Cart.module.css"
+import Product from "./Product"
 import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "../../typeOfStates/RootState"
+import { RootState } from "../../../typeOfStates/RootState"
 import {
     setCartDelivery,
     setCart,
     setCartData,
     setUnqueEl,
-} from "../../reducers/cartSlice"
-import { setShow } from "../../reducers/navSlice"
+} from "../../../reducers/cartSlice"
+import { setShow } from "../../../reducers/navSlice"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
@@ -66,7 +66,7 @@ const Cart = () => {
                             {`${allQuantityProducts} products: ${totalPrice.reduce(
                                 (acc, el) => acc + el,
                                 0
-                            )}`}
+                            )}c`}
                         </h2>
                         <div className={styles.cart__products}>
                             {uniqueEl.map((data, ind) => (
@@ -125,7 +125,7 @@ const Cart = () => {
                                     {`total: ${totalPrice.reduce(
                                         (acc, el) => acc + el,
                                         cartDelivery ? 300 : 0
-                                    )} `}
+                                    )}c`}
                                 </h4>
                             </div>
                             <div className={styles.cart__line}></div>

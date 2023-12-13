@@ -9,9 +9,10 @@ function KindOfFood() {
         >
             <div className={styles.foodSelection__row}>
                 <Link
-                    to={`fOod`.toLowerCase()}
+                    to={`food`.toLowerCase()}
                     smooth={true}
                     duration={500}
+                    offset={-100}
                 >
                     <div className={styles.foodSelection__item}>
                         <div className={styles.foodSelection__svg}>
@@ -20,14 +21,15 @@ function KindOfFood() {
                                 alt=""
                             />
                         </div>
-                        <h3 className={styles.foodSelection__title}>pizza</h3>
+                        <h3 className={styles.foodSelection__title}>food</h3>
                     </div>
                 </Link>
 
                 <Link
-                    to={`fOod`.toLowerCase()}
+                    to={`dessert`.toLowerCase()}
                     smooth={true}
                     duration={500}
+                    offset={-100}
                 >
                     <div className={styles.foodSelection__item}>
                         <div className={styles.foodSelection__svg}>
@@ -43,6 +45,7 @@ function KindOfFood() {
                     to={`drinks`.toLowerCase()}
                     smooth={true}
                     duration={500}
+                    offset={-100}
                 >
                     <div className={styles.foodSelection__item}>
                         <div className={styles.foodSelection__svg}>
@@ -55,9 +58,10 @@ function KindOfFood() {
                     </div>
                 </Link>
                 <Link
-                    to={`fOod`.toLowerCase()}
+                    to={`combo`.toLowerCase()}
                     smooth={true}
                     duration={500}
+                    offset={-100}
                 >
                     <div className={styles.foodSelection__item}>
                         <div className={styles.foodSelection__svg}>

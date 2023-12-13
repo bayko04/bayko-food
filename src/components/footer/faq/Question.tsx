@@ -20,10 +20,11 @@ const Question = ({ question, answer, id }: QuestionProps) => {
                     }}
                     className={styles.question__btn}
                     style={{
-                        transform: `${openFaq[id || 0] ? "rotate(90deg)" : ""}`,
+                        transform: `${openFaq[id || 0] ? "rotate(45deg)" : ""}`,
+                        background: `${openFaq[id || 0] ? "#3b3b3d" : ""}`,
                     }}
                 >
-                    {">"}
+                    +
                 </button>
             </div>
             {openFaq[id || 0] && (

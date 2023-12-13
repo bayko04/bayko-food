@@ -10,7 +10,9 @@ import {
 import { useEffect } from "react"
 import Found from "./Found"
 import foodsData from "../../data/foodsData"
+import dessertData from "../../data/dessertData"
 import drinksData from "../../data/drinksData"
+import comboData from "../../data/comboData"
 
 function Search() {
     const dispatch = useDispatch()
@@ -25,7 +27,12 @@ function Search() {
     )
 
     useEffect(() => {
-        const allData = [...foodsData, ...drinksData]
+        const allData = [
+            ...foodsData,
+            ...dessertData,
+            ...drinksData,
+            ...comboData,
+        ]
         dispatch(
             setSearchData(
                 allData.filter((el) => {

@@ -59,12 +59,13 @@ const signSlice = createSlice({
         },
     },
     reducers: {
-        setForm: (state) => {
-            if (state.form === false) {
-                state.form = true
-            } else {
-                state.form = false
-            }
+        setForm: (state, action) => {
+            // if (state.form === false) {
+            //     state.form = true
+            // } else {
+            //     state.form = false
+            // }
+            state.form = action.payload
         },
         setSignIn: (state, action) => {
             state.signIn = action.payload

@@ -4,14 +4,19 @@ import Nav from "./Nav"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../typeOfStates/RootState"
 import { setShow } from "../../reducers/navSlice"
+import { setForm } from "../../reducers/signSlilce"
 import { useEffect } from "react"
 
 const Header = () => {
     const dispatch = useDispatch()
+    const form = useSelector((state: RootState) => state.sign.form)
     const show = useSelector((state: RootState) => state.nav.show)
 
     return (
-        <div className={styles.header}>
+        <div
+            style={{ overflow: `${show || form ? "visible" : "hidden"}` }}
+            className={styles.header}
+        >
             <div className="container">
                 <div className={styles.header__row}>
                     <div className={styles.header__logo}>
@@ -22,6 +27,7 @@ const Header = () => {
                             show
                                 ? dispatch(setShow(false))
                                 : dispatch(setShow(true))
+                            dispatch(setForm(false))
                         }}
                         className={`${styles.header__showNav} ${
                             show ? styles.header__closeNav : ""

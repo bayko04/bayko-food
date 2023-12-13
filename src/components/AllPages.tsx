@@ -3,7 +3,7 @@ import Intro from "./intro/Intro"
 import Menu from "./menu/Menu"
 import MoreInfo from "./moreInfo/MoreInfo"
 import Footer from "./footer/Footer"
-import Cart from "./header/Cart"
+import Cart from "./header/cart/Cart"
 import { RootState } from "../typeOfStates/RootState"
 import { useSelector } from "react-redux"
 

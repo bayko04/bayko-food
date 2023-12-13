@@ -19,19 +19,28 @@ function Footer() {
                     </ul>
                 </div>
                 <div className={styles.footer__network}>
-                    <a href="">
+                    <a
+                        target="_blank"
+                        href="https://wa.me/+996770566939"
+                    >
                         <img
                             src="/images/icons/1.png"
                             alt=""
                         />
                     </a>
-                    <a href="">
+                    <a
+                        target="_blank"
+                        href="https://www.instagram.com/b_ayel.24/"
+                    >
                         <img
                             src="/images/icons/2.png"
                             alt=""
                         />
                     </a>
-                    <a href="">
+                    <a
+                        target="_blank"
+                        href="https://t.me/bayko04"
+                    >
                         <img
                             src="/images/icons/3.png"
                             alt=""

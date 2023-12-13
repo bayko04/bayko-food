@@ -39,6 +39,13 @@
 .header__list a {
     font-size: 24px;
     color: #fff;
+    transition: all 0.2s ease;
+}
+.header__list a:hover {
+    color: #d4d4d4;
+}
+.header__list a:active {
+    color: #ffffff;
 }
 
 .header__list_sign {
@@ -51,6 +58,13 @@
     padding: 6px 12px;
     border-radius: 10px;
     color: #fff;
+    transition: all 0.2s ease;
+}
+.header__sign_button:hover {
+    background: #045e61;
+}
+.header__sign_button:active {
+    background: #09a3a8;
 }
 .header__cart_button {
     font-size: 24px;
@@ -58,11 +72,11 @@
     padding: 6px 12px;
     border-radius: 10px;
     color: #fff;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
 }
 
 .header__cart_button:hover {
-    background: #da5300;
+    background: #a75421;
 }
 .header__cart_button:active {
     background: rgb(231, 100, 19);

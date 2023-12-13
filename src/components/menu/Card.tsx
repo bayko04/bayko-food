@@ -44,7 +44,7 @@ const Card = ({ img, title, text, price, weight, id }: CardProps) => {
                     <div className={styles.card__line}></div>
                 </div>
                 <div className={styles.card__row}>
-                    <h5 className={styles.card__price}>{price}</h5>
+                    <h5 className={styles.card__price}>{price}c</h5>
                     <button
                         onClick={() => {
                             dispatch(

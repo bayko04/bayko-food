@@ -8,6 +8,7 @@ import {
     incrementCount,
     decrementCount,
     setPick,
+    resetCount,
 } from "../../reducers/cardPcikedSlcie"
 import {
     setCounter,
@@ -35,6 +36,7 @@ const PickedCard = ({
             <div
                 onClick={() => {
                     dispatch(setPick(false))
+                    dispatch(resetCount(1))
                 }}
                 className={styles.pickedCard__back}
             ></div>
@@ -54,7 +56,7 @@ const PickedCard = ({
                 <div className={styles.pickedCard__overLine}></div>
                 <div className={styles.pickedCard__priceForWeight}>
                     <h5 className={styles.pickedCard__weight}>Вес: {weight}</h5>
-                    <h5 className={styles.pickedCard__price}>{price}</h5>
+                    <h5 className={styles.pickedCard__price}>{price}c</h5>
                 </div>
                 <div className={styles.pickedCard__underLine}></div>
                 <div className={styles.pickedCard__howMany}>
@@ -84,6 +86,7 @@ const PickedCard = ({
                             dispatch(setQuantityCounter({ id, count }))
                             dispatch(setTotalPrice({ id, price }))
                             dispatch(setPick(false))
+                            dispatch(resetCount(1))
                         }}
                     >
                         add to cart

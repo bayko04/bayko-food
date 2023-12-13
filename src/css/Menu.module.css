@@ -44,6 +44,9 @@
     overflow: hidden;
     cursor: pointer;
 }
+.card:hover {
+    border: 2px solid #ff7d2e;
+}
 
 .card__img {
     width: 150px;
@@ -98,7 +101,7 @@
     transition: all 0.2s ease;
 }
 .card__cart:hover {
-    background: #da5300;
+    background: #a75421;
 }
 .card__cart:active {
     background: rgb(231, 100, 19);
@@ -272,6 +275,14 @@
     .card {
         flex: 0 0 32%;
     }
+
+    .card__price {
+        font-size: 20px;
+    }
+    .card__cart {
+        font-size: 20px;
+        padding: 3px 10px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -279,6 +290,19 @@
     }
     .card {
         flex: 0 0 100%;
+    }
+
+    .card__price {
+        font-size: 22px;
+    }
+    .card__cart {
+        font-size: 22px;
+        padding: 7px 13px;
+    }
+
+    .pickedCard__addToCart button {
+        font-size: 22px;
+        padding: 7px 13px;
     }
 
     /* .pickedCard {

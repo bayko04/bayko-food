@@ -26,7 +26,7 @@ const Order = () => {
                                     <span className={styles.item__count}></span>
                                 </h5>
                                 <h5 className={styles.item__price}>
-                                    {data.price * counter[data.id || 0]}
+                                    {data.price * counter[data.id || 0]}c
                                 </h5>
                             </div>
                         )
@@ -37,7 +37,7 @@ const Order = () => {
                     >{`Total: ${totalPrice.reduce(
                         (acc, el) => acc + el,
                         0
-                    )}`}</h4>
+                    )}c`}</h4>
                 </div>
 
                 {/* SECTION ADRESS */}
