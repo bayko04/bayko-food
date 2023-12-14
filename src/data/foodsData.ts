@@ -2,7 +2,7 @@ import { ICards } from "../components/types/types"
 
 const foodsData: Array<ICards> = [
     {
-        img: "/images/content/dishes/Burger.png",
+        img: "/images/content/dishes/burger.png",
         title: "Burger",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
@@ -18,7 +18,7 @@ const foodsData: Array<ICards> = [
         weight: "350г",
     },
     {
-        img: "/images/content/dishes/Shawarma.png",
+        img: "/images/content/dishes/shawarma.png",
         title: "Shawarma",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
@@ -42,7 +42,7 @@ const foodsData: Array<ICards> = [
         weight: "350г",
     },
     {
-        img: "/images/content/dishes/beafento.png",
+        img: "/images/content/dishes/kurdak.png",
         title: "Kurdak",
         text: "сладким чили соусом. ТОФУ ЖАНА КИМЧИ МЕНЕН АВТОРДУК САЛАТ Куурулган тофу,",
         price: 1500,
