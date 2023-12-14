@@ -27,15 +27,16 @@ const Found = ({ img, price, title, id, weight, text }: FoundProps) => {
             >
                 <div className={styles.found__row}>
                     <div className={styles.found__foodName}>
-                        <img
-                            className={styles.found__img}
-                            src={img}
-                            alt=""
-                        />
+                        <div className={styles.found__img}>
+                            <img
+                                src={img}
+                                alt=""
+                            />
+                        </div>
                         <h3 className={styles.found__title}>{title}</h3>
                     </div>
 
-                    <h4 className={styles.found__price}>{price}</h4>
+                    <h4 className={styles.found__price}>{price}c</h4>
                 </div>
             </div>
             {/* {which === id && pick && (

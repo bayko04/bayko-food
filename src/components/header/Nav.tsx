@@ -7,6 +7,7 @@ import RegisterForm from "./RegisterForm"
 import { setCart } from "../../reducers/cartSlice"
 import { useEffect } from "react"
 import { Link as ScrollLink } from "react-scroll"
+import { setShow } from "../../reducers/navSlice"
 
 const Nav = () => {
     const dispatch = useDispatch()
@@ -41,12 +42,22 @@ const Nav = () => {
                             smooth={true}
                             duration={500}
                             offset={-100}
+                            onClick={() => {
+                                dispatch(setShow(false))
+                            }}
                         >
                             Menu
                         </ScrollLink>
                     </li>
                     <li className={styles.header__list}>
-                        <Link to="/contacts">Contacts</Link>
+                        <Link
+                            onClick={() => {
+                                dispatch(setShow(false))
+                            }}
+                            to="/contacts"
+                        >
+                            Contacts
+                        </Link>
                     </li>
                     <li
                         className={`${styles.header__list} ${styles.header__list_sign}`}
@@ -71,6 +82,7 @@ const Nav = () => {
                                 cart
                                     ? dispatch(setCart(false))
                                     : dispatch(setCart(true))
+                                dispatch(setShow(false))
                             }}
                             className={styles.header__cart_button}
                         >
